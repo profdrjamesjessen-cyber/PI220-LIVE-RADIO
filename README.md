@@ -1,6 +1,6 @@
-# PI220 RADIO — Application 002
+# PI220 RADIO — App
 
-## Stage 003 — Presenter Microphone Workspace
+## Stage 003 — Presenter Microphone Workspace and live broadcasting 
 
 Includes the Stage 003 local playlist manager and adds a presenter microphone input test:
 - Request microphone permission through the browser.
