@@ -11,7 +11,89 @@
 @media(max-width:390px){.control-row{gap:4px}.play-button,.stop-button{padding:0 8px}.volume input{width:48px}.station-tags{gap:9px;font-size:6px}.playlist-actions{gap:4px}.load-button{padding:7px;font-size:7px}}
 
 /* Stage 003 — presenter microphone workspace */
-.dashboard{grid-template-rows:auto minmax(0,1fr) minmax(0,.48fr) auto}
-.player-card{grid-column:1;grid-row:2}.playlist-card{grid-column:2;grid-row:2/4}.studio-card{grid-column:1;grid-row:3;background:#0b1927;border:1px solid #294257;padding:13px 16px;min-height:0;display:flex;flex-direction:column;justify-content:center}
+.studio-card{background:#0b1927;border:1px solid #294257;padding:13px 16px}
 .mic-controls{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-top:10px}.device-label{font-size:7px;letter-spacing:1px;color:var(--muted)}.mic-controls select{background:#081522;color:var(--text);border:1px solid #38556a;padding:7px 8px;font-size:8px;min-width:130px;max-width:190px}.mic-controls button:disabled{opacity:.35;cursor:not-allowed}.mic-meter{display:flex;align-items:center;gap:10px;margin-top:10px}.meter-track{height:7px;flex:1;background:#07111c;border:1px solid #294257;overflow:hidden}.meter-level{height:100%;width:0%;background:linear-gradient(90deg,#55d7ed 0%,#c5a66a 78%,#d87565 100%);transition:width .08s linear}.mic-meter span{font-size:7px;letter-spacing:1px;color:var(--muted);min-width:90px}.studio-disclaimer{font-size:7px;letter-spacing:.8px;color:#8295a5;margin:8px 0 0}
 @media(max-width:700px){.dashboard{display:flex;flex-direction:column}.player-card{min-height:270px}.playlist-card{height:310px}.studio-card{min-height:155px}}
+
+
+/* PI220 RADIO — Responsive, anchored application workspace */
+html, body { width:100%; height:100%; min-height:0; overflow:hidden; }
+.radio-app {
+    width:100%; height:100vh; height:100dvh; min-height:0;
+    display:flex; flex-direction:column; overflow:hidden;
+}
+.topbar { flex:0 0 64px; min-height:0; }
+
+.dashboard {
+    flex:1 1 0; min-width:0; min-height:0;
+    display:grid;
+    grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
+    grid-template-rows:minmax(78px,auto) minmax(270px,1fr) minmax(155px,.58fr) minmax(20px,auto);
+    grid-template-areas:
+      "intro intro"
+      "player playlist"
+      "studio playlist"
+      "note note";
+    gap:12px 18px; padding:12px 0;
+    overflow-x:hidden; overflow-y:auto;
+    overscroll-behavior:contain;
+    scrollbar-width:thin; scrollbar-color:#35546a transparent;
+    align-content:stretch;
+}
+.station-intro { grid-area:intro; min-width:0; }
+.player-card { grid-area:player; min-width:0; min-height:0; }
+.studio-card {
+    grid-area:studio; min-width:0; min-height:0;
+    display:flex; flex-direction:column; justify-content:center;
+}
+.playlist-card { grid-area:playlist; min-width:0; min-height:0; }
+.system-note { grid-area:note; min-width:0; }
+
+.player-card, .studio-card, .playlist-card { min-height:0; overflow:hidden; }
+.playlist-list {
+    flex:1 1 0; min-height:0; overflow-x:hidden; overflow-y:auto;
+    overscroll-behavior:contain;
+}
+.track-row, .track-meta, .mic-controls, .mic-meter { min-width:0; }
+.track-meta { overflow:hidden; }
+.track-meta h3, .track-meta p { overflow-wrap:anywhere; }
+.visualizer { flex:0 0 48px; min-height:48px; }
+footer { flex:0 0 33px; min-height:33px; }
+
+@media (min-width:701px) and (max-height:720px) {
+    .topbar { flex-basis:54px; }
+    .dashboard {
+        grid-template-rows:minmax(66px,auto) minmax(270px,1fr) minmax(155px,.58fr) minmax(20px,auto);
+        gap:9px 14px; padding:8px 0;
+    }
+    .station-intro { min-height:66px; }
+    h1 { font-size:clamp(25px,3vw,35px); margin:5px 0 3px; }
+    .station-tags { margin-top:5px; }
+    .player-card, .playlist-card { padding:13px 14px; }
+    .studio-card { padding:10px 14px; }
+    .track-row { margin:9px 0 7px; }
+    .visualizer { margin:2px 0 6px; }
+    .control-row { margin-top:6px; }
+    footer { flex-basis:28px; min-height:28px; }
+}
+@media (max-width:700px) {
+    html, body { height:100%; min-height:0; overflow:hidden; }
+    .radio-app {
+        height:100vh; height:100dvh; min-height:0;
+        overflow:hidden; padding:0 14px;
+    }
+    .topbar { flex-basis:58px; }
+    .dashboard {
+        display:flex; flex:1 1 0; min-height:0; flex-direction:column;
+        overflow-x:hidden; overflow-y:auto; gap:12px; padding:12px 0;
+    }
+    .station-intro { min-height:auto; flex:0 0 auto; }
+    .player-card { min-height:270px; flex:0 0 auto; }
+    .studio-card { min-height:155px; flex:0 0 auto; }
+    .playlist-card { height:310px; min-height:240px; flex:0 0 auto; }
+    .system-note { flex:0 0 auto; }
+    footer {
+        height:auto; min-height:35px; flex:0 0 auto;
+        padding:9px 0; gap:8px; flex-wrap:wrap;
+    }
+}

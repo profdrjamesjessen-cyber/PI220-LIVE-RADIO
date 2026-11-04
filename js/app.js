@@ -34,7 +34,13 @@ stop.addEventListener("click",()=>{audio.pause();audio.currentTime=0;setStatus("
 audio.addEventListener("play",()=>{$("playGlyph").textContent="Ⅱ";$("playText").textContent="PAUSE";setStatus("LOCAL AUTOMATION PLAYING");spectrum()});audio.addEventListener("pause",()=>{$("playGlyph").textContent="▶";$("playText").textContent="PLAY";cancelAnimationFrame(raf);idle();if(audio.src&&audio.currentTime>0&&status.textContent!=="STOPPED")setStatus("PAUSED")});audio.addEventListener("ended",advance);
 audio.addEventListener("loadedmetadata",()=>{duration.textContent=fmt(audio.duration);progress.value=0});audio.addEventListener("timeupdate",()=>{if(!seeking&&Number.isFinite(audio.duration)&&audio.duration>0)progress.value=Math.round(audio.currentTime/audio.duration*1000);currentTime.textContent=fmt(audio.currentTime)});
 progress.addEventListener("input",()=>{seeking=true;if(Number.isFinite(audio.duration))currentTime.textContent=fmt(Number(progress.value)/1000*audio.duration)});progress.addEventListener("change",()=>{if(Number.isFinite(audio.duration))audio.currentTime=Number(progress.value)/1000*audio.duration;seeking=false});
-volume.addEventListener("input",()=>{audio.volume=Number(volume.value)/100;volumeValue.textContent=volume.value+"%"});audio.volume=.7;window.addEventListener("resize",resize);
+volume.addEventListener("input",()=>{audio.volume=Number(volume.value)/100;volumeValue.textContent=volume.value+"%"});audio.volume=.7;
+if ("ResizeObserver" in window) {
+ const visualizerObserver = new ResizeObserver(() => resize());
+ visualizerObserver.observe(canvas);
+} else {
+ window.addEventListener("resize", resize);
+}
 (async()=>{resize();try{db=await openDB();const saved=await loadStored();tracks=saved.map(x=>({id:x.id,name:x.name,type:x.type,blob:x.blob}));libraryStatus.textContent="LOCAL LIBRARY · RESTORED";if(tracks.length)selectTrack(0)}catch(e){libraryStatus.textContent="BROWSER STORAGE UNAVAILABLE";console.warn("PI220 Radio local library:",e)}render()})();
 
 // Presenter studio: microphone input test only; no network transmission.
