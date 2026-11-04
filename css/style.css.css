@@ -1,0 +1,32 @@
+/*
+  PI220 RADIO — Stage 003 layout correction
+  Append this block to the END of css/style.css.
+  It preserves the existing desktop two-column layout and mobile rules.
+*/
+
+@media (min-width: 701px) {
+  /* The embedded PI220 viewport can be short: let the dashboard scroll
+     instead of clipping the player and microphone workspace. */
+  .dashboard {
+    grid-template-rows: auto minmax(270px, auto) minmax(175px, auto) auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #35546a transparent;
+  }
+
+  /* Keep each card tall enough for its own controls and information. */
+  .player-card {
+    min-height: 270px;
+  }
+
+  .studio-card {
+    min-height: 175px;
+    justify-content: flex-start;
+  }
+
+  /* Playlist continues to occupy the right column across both left rows. */
+  .playlist-card {
+    min-height: 458px;
+  }
+}
