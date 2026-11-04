@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#08111d">
+<meta name="description" content="PI220 Radio — independent broadcasting network">
+<title>PI220 RADIO | Beyond the Horizon</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="radio-app">
+<header class="topbar">
+ <a class="brand" href="#" aria-label="PI220 Radio home"><span class="brand-mark">220</span><span><b>PI220 RADIO</b><small>INDEPENDENT BROADCAST NETWORK</small></span></a>
+ <div class="top-status"><i></i><span id="stationStatus">STATION READY</span></div>
+</header>
+<main class="dashboard">
+ <section class="station-intro">
+  <div class="eyebrow">PARALLEL INDUSTRIES 220 <span>/</span> APPLICATION 002</div>
+  <h1>BEYOND THE <em>HORIZON.</em></h1>
+  <p>Independent sound. Curated programmes. A new frequency.</p>
+  <div class="station-tags"><span>PI220 RADIO</span><span>EST. 2026</span><span>GLOBAL LISTENING</span></div>
+ </section>
+ <section class="player-card">
+  <div class="section-head"><div><div class="eyebrow">PUBLIC LISTENING</div><h2>Station player</h2></div><span class="pill" id="playbackStatus">READY</span></div>
+  <div class="track-row"><div class="cover"><b>PI</b><small>220 RADIO</small></div><div class="track-meta"><label>NOW PLAYING</label><h3 id="trackTitle">Playlist is empty</h3><p id="trackArtist">Add audio files to begin</p></div></div>
+  <div class="visualizer"><canvas id="visualizer" height="54"></canvas></div>
+  <div class="progress-row"><span id="currentTime">00:00</span><input id="progress" type="range" min="0" max="1000" value="0" aria-label="Track position"><span id="duration">00:00</span></div>
+  <div class="control-row">
+   <button id="previousButton" class="stop-button" type="button" disabled title="Previous track">|◀</button>
+   <button id="playButton" class="play-button" type="button" disabled><span id="playGlyph">▶</span><span id="playText">PLAY</span></button>
+   <button id="stopButton" class="stop-button" type="button" disabled>STOP</button>
+   <button id="nextButton" class="stop-button" type="button" disabled title="Next track">▶|</button>
+   <label class="volume"><span>VOL</span><input id="volume" type="range" min="0" max="100" value="70"><output id="volumeValue">70%</output></label>
+  </div>
+  <audio id="audio" preload="metadata"></audio>
+ </section>
+ <section class="studio-card">
+  <div class="section-head"><div><div class="eyebrow">PRESENTER WORKSPACE</div><h2>Microphone studio</h2></div><span class="pill" id="micStatus">MIC OFF</span></div>
+  <div class="mic-controls">
+   <label class="device-label" for="micDevice">INPUT DEVICE</label>
+   <select id="micDevice" aria-label="Microphone input"><option value="">Default microphone</option></select>
+   <button id="micStart" class="load-button" type="button">ENABLE MICROPHONE</button>
+   <button id="micMute" class="text-button" type="button" disabled>MUTE</button>
+   <button id="micStop" class="text-button" type="button" disabled>DISCONNECT</button>
+  </div>
+  <div class="mic-meter"><div class="meter-track"><div id="micLevel" class="meter-level"></div></div><span id="micLevelText">INPUT LEVEL 0%</span></div>
+  <p class="studio-disclaimer">LOCAL MICROPHONE TEST ONLY · NO LIVE TRANSMISSION</p>
+ </section>
+ <section class="playlist-card">
+  <div class="section-head"><div><div class="eyebrow">LOCAL AUTOMATION</div><h2>Playlist manager</h2></div><span class="pill" id="queueCount">0 TRACKS</span></div>
+  <div class="playlist-actions"><label class="load-button" for="audioFiles">＋ ADD AUDIO FILES</label><input id="audioFiles" type="file" accept="audio/*" multiple><button id="clearButton" class="text-button" type="button" disabled>CLEAR LIST</button></div>
+  <div class="playlist-list" id="playlistList"><div class="empty-state">YOUR PLAYLIST IS EMPTY<br><small>Add audio files to build your station queue.</small></div></div>
+  <div class="playlist-foot"><span id="libraryStatus">LOCAL LIBRARY · READY</span><span>TRACKS PLAY IN ORDER</span></div>
+ </section>
+ <aside class="system-note"><span class="note-mark">i</span><span>Stage 003 · Local playlist automation and microphone testing. No audio is transmitted to remote listeners.</span></aside>
+</main>
+<footer><span>PI220 RADIO · APPLICATION 002</span><span>THE FUTURE IS OURS TO BUILD.</span></footer>
+</div>
+<script src="js/app.js"></script>
+</body></html>
