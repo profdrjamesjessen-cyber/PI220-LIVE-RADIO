@@ -9,5 +9,12 @@
       "type": "Official Track",
       "url": "https://raw.githubusercontent.com/profdrjamesjessen-cyber/PI220/98bdf493a9366e05094169446db5c3efd64db98e/media/PI220%20TAKE%20ME%20THERE.mp3"
     }
+     {
+      "id": "PI220-TRACK-002",
+      "title": "SELINA",
+      "artist": "Prof D.Sc Jesse Jessen",
+      "type": "Legacy Track",
+      "url": "https://dnma3z6c8ojev.cloudfront.net/songs/mp3_files/26279564/original/selina.mp3?e8817609673e6ceae29a00a3b1c7efb254fdbaf3bf1c254634d8c748a34cefa9774f07d48e59af26757c12763b649fd40f59106e5e8d10952bcc3c32e7bc7cf2298f3b3edd2312891c85516d3d45c20496ff4d5f0d0b71379eb5135991"
+    }
   ]
 }
