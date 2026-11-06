@@ -2,6 +2,7 @@
 "use strict";
 const $=id=>document.getElementById(id);
 const audio=$("audio"),fileInput=$("audioFiles"),play=$("playButton"),stop=$("stopButton"),prev=$("previousButton"),next=$("nextButton"),volume=$("volume"),volumeValue=$("volumeValue"),status=$("playbackStatus"),title=$("trackTitle"),artist=$("trackArtist"),progress=$("progress"),currentTime=$("currentTime"),duration=$("duration"),list=$("playlistList"),count=$("queueCount"),clear=$("clearButton"),libraryStatus=$("libraryStatus"),canvas=$("visualizer"),ctx=canvas.getContext("2d");
+audio.crossOrigin = "anonymous";
 let tracks=[],current=-1,urls=new Map(),db=null,audioContext=null,analyser=null,raf=0,seeking=false;
 const DB_NAME="PI220RadioLibrary",DB_VERSION=1,STORE="tracks",REMOTE_PLAYLIST="./playlist.json";
 
