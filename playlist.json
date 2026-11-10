@@ -11,16 +11,80 @@
       "url": "https://raw.githubusercontent.com/profdrjamesjessen-cyber/PI220/98bdf493a9366e05094169446db5c3efd64db98e/media/PI220%20TAKE%20ME%20THERE.mp3"
     },
 
+    
+      {
+      "id": "PI220-TRACK-301",
+      "title": "Global Politics",
+      "artist": "Prof Dsc Jesse Jessen",
+      "type": "PI220 Political",
+      "url": "https://raw.githubusercontent.com/profdrjamesjessen-cyber/PI220/6b3e892c9c6a88c0e5c475eb85554dc0a466a1df/media/Prof%20Dr%20Jesse%20Jessen%20-%20PROF%20DR%20JESSE%20JESSENGl%20GLOBAL%20(1)%20%5BTTL%5D.m4a"
+    
+    },
+
+
       {
       "id": "PI220-TRACK-101",
-      "title": "ATLAS 220 MEMORANDUM",
+      "title": "Atlas 220 Memorandum",
       "artist": "Prof Dsc Jesse Jessen",
       "type": "Master Lesson",
       "url": "https://raw.githubusercontent.com/profdrjamesjessen-cyber/PI220/50061aa0092c47869334882c3dd7234b97c56eb6/media/Prof%20Dr%20Jesse%20Jessen%20-%20%E2%80%A2%20ATLAS%20220%20%E2%80%A2%20MEMORANDUM%20%20%E2%80%A2%20PROF%20D.SC%20JESSE%20JESSEN%20%E2%80%A2%20%5BTTL%5D.m4a"
 
     },
 
+      {
+      "id": "PI220-TRACK-102",
+      "title": "Systems Engineering Beyond Machines",
+      "artist": "Prof Dsc Jesse Jessen",
+      "type": "Master Course",
+      "url": "https://raw.githubusercontent.com/profdrjamesjessen-cyber/PI220/24143be3d700452c0699e2b1ae89c58f85ce15eb/media/Prof%20Dr%20Jesse%20Jessen%20-%20MASTER%20COURSE%20-%20SPECIAL%20LECTURE%20SYSTEMS%20ENGINEERING%20BEYON%20%5BTTL%5D.m4a"
+
+    },
+
+     {
+      "id": "PI220-TRACK-103",
+      "title": "Systems Engineering Beyond Machines",
+      "artist": "Prof Dsc Jesse Jessen",
+      "type": "Master Course",
+      "url": "https://raw.githubusercontent.com/profdrjamesjessen-cyber/PI220/24143be3d700452c0699e2b1ae89c58f85ce15eb/media/Prof%20Dr%20Jesse%20Jessen%20-%20MASTER%20COURSE%20-%20SPECIAL%20LECTURE%20SYSTEMS%20ENGINEERING%20BEYON%20%5BTTL%5D.m4a"
+
+    },
+
+    {
+      "id": "PI220-TRACK-104",
+      "title": "Systems Engineering Lesson II Part III",
+      "artist": "Prof Dsc Jesse Jessen",
+      "type": "Master Course",
+      "url": "https://raw.githubusercontent.com/profdrjamesjessen-cyber/PI220/abe5f66a7f23b327fb75c974c645773977b25803/media/Prof%20Dr%20Jesse%20Jessen%20-%20MASTER%20COURSE%20LESSON%20II%20-%20PART%20III%20%EA%9E%89%20SYSTEMS%20ENGINEERING.%20THE%20ARCHITECTURE%20OF%20INNOVATION%20by%20Prof%20Dr%20Jesse%20Jessen.%20PARALLEL%20INDUSTRIES%20220.%20%5BTTL%5D.m4a"
    
+    },
+
+  {
+      "id": "PI220-TRACK-105",
+      "title": "Systems Engineering Lesson II Part II",
+      "artist": "Prof Dsc Jesse Jessen",
+      "type": "Master Course",
+      "url": "https://raw.githubusercontent.com/profdrjamesjessen-cyber/PI220/a39b5a069085688cc0e445fab9c9599501c96bd7/media/Prof%20Dr%20Jesse%20Jessen%20-%20MASTER%20COURSE%20-%20LESSON%20II%20PART%20II%20%EA%9E%89%20SYSTEM%20ARCHITECTURE%2C%20REQUIREMENTS%20AND%20INTEGRATION%20%5BTTL%5D.m4a"
+
+    },
+
+    {
+      "id": "PI220-TRACK-106",
+      "title": "Introduction II Part I",
+      "artist": "Prof Dsc Jesse Jessen",
+      "type": "Master Course",
+      "url": "https://raw.githubusercontent.com/profdrjamesjessen-cyber/PI220/0d9e8d7428238bbfbd3c50f0c6d8ebe3a696f581/media/Prof%20Dr%20Jesse%20Jessen%20-%20MASTER%20COURSE%20-%20LESSON%20II%20PART%20I%20%EA%9E%89%20Introduction%20%5BTTL%5D.m4a"
+
+    },
+
+    {
+      "id": "PI220-TRACK-107",
+      "title": "Inaugural I Part I",
+      "artist": "Prof Dsc Jesse Jessen",
+      "type": "Master Course",
+      "url": "https://raw.githubusercontent.com/profdrjamesjessen-cyber/PI220/e6752ce4a3e15a4f69dddf7391698ddbea5e5078/media/Prof%20Dr%20Jesse%20Jessen%20-%20MASTER%20COURSE%20-%20LECTURE%20I%20INAUGURAL.%20%20PROF%20DR%20JESSE%20JESSEN.%20PARALLEL%20INDUSTRIES%20220.%20%5BTTL%5D%20(1).m4a"
+        
+    },
+
      {
       "id": "PI220-TRACK-002",
       "title": "SELINA",
