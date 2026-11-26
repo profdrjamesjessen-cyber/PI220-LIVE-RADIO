@@ -1043,6 +1043,29 @@ footer {
         width: 22px;
         height: 22px;
     }
+
+/* =========================================================
+   PI220 LIVE RADIO — ADAPTIVE ENGINE INTEGRATION
+   Stage 001
+   ========================================================= */
+
+.radio-app {
+    --app-width: 100%;
+    --app-height: 100%;
+}
+
+/* Adaptive layout state */
+
+.radio-app[data-layout="desktop"] {
+    /* Standard desktop workspace */
+}
+
+.radio-app[data-layout="compact"] {
+    /* Compact desktop workspace */
+}
+
+.radio-app[data-layout="mobile"] {
+    /* Mobile and narrow-screen workspace */
 }
 
 
